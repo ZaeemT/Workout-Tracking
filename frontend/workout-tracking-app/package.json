@@ -1,5 +1,5 @@
 {
-  "proxy": "https://workout-tracking-server.vercel.app/",
+  "proxy": "http://localhost:4000",
   "name": "workout-tracking-app",
   "private": true,
   "version": "0.0.0",
