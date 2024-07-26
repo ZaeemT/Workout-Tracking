@@ -11,8 +11,9 @@ const userRoutes = require('./routes/user')
 const app = express();
 
 app.use(cors());
-
-
+app.use(cors({
+    origin: 'https://workout-tracking-client.vercel.app'
+  }));
 // middleware
 app.use(express.json());
 
@@ -20,8 +21,6 @@ app.use((req, res, next) => {
     console.log(req.path, req.method);
     next();
 })
-
-app.get('/', (req, res) => req.status(200).json({message: 'Server working'}))
 
 // routes
 app.use('/api/workouts', workoutRoutes);
